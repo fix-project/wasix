@@ -1,5 +1,7 @@
 # Root directory of the WASI SDK
 WASI_SDK_PATH ?=/opt/wasi-sdk
+# sysroot of the WASI
+WASI_SYSROOT ?=/opt/wasi-sdk/share/wasi-sysroot
 # Custom CFLAGS
 WASI_CFLAGS ?=
 # Install target
@@ -7,11 +9,11 @@ DESTDIR ?=/opt
 
 CC=$(WASI_SDK_PATH)/bin/clang
 WASI_BASE_CFLAGS= \
-  --sysroot=$(WASI_SDK_PATH)/share/wasi-sysroot \
+  --sysroot=$(WASI_SYSROOT) \
   -g \
   --target=wasm32-unknown-wasi \
   -D_WASI_EMULATED_SIGNAL \
-  -I$(WASI_SDK_PATH)/share/wasi-sysroot/include \
+  -I$(WASI_SYSROOT)/include \
   -isystem ./include
 
 AR=$(WASI_SDK_PATH)/bin/llvm-ar
