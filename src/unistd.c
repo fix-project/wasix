@@ -45,6 +45,11 @@ pid_t getppid(void) {
 #endif
 }
 
+pid_t getsid(pid_t pid) {
+    (void)unimplemented(ENOTSUP);
+    return -1;
+}
+
 uid_t getuid(void) {
     (void)unimplemented(0);
     char *val = getenv("WASIX_UID");
@@ -168,4 +173,9 @@ char *realpath(const char *restrict path, char *restrict resolved_path) {
     strncpy(resolved_path, path, len);
     resolved_path[len] = '\0';
     return resolved_path;
+}
+
+unsigned alarm(unsigned time) {
+    (void)unimplemented(ENOTSUP);
+    return -1;
 }

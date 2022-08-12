@@ -17,6 +17,8 @@ uid_t getegid(void);
 pid_t getpid(void);
 pid_t getppid(void);
 
+pid_t getsid(pid_t);
+
 int system(const char *command);
 int execv(const char *pathname, char *const argv[]);
 int execve(const char *pathname, char *const argv[], char *const envp[]);
@@ -33,5 +35,7 @@ pid_t fork(void);
 int gethostname(char *name, size_t len);
 
 char *realpath(const char *path, char *resolved_path);
+
+unsigned alarm(unsigned);
 
 #endif
