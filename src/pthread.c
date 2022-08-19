@@ -139,3 +139,14 @@ int pthread_join(pthread_t thread, void **retval)
     return EINVAL;
 }
 
+int pthread_mutexattr_init(pthread_mutexattr_t * a) {
+    return EAGAIN;
+}
+
+int pthread_mutexattr_settype(pthread_mutexattr_t * a, int b) {
+    return EAGAIN;
+}
+
+int pthread_mutexattr_destroy(pthread_mutexattr_t * a) {
+    return EAGAIN;
+}
