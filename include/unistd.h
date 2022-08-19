@@ -2,6 +2,10 @@
 #ifndef _WASIX_UNISTD_H
 #define _WASIX_UNISTD_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include_next <unistd.h>
 
 #include <bits/alltypes.h>
@@ -37,5 +41,9 @@ int gethostname(char *name, size_t len);
 char *realpath(const char *path, char *resolved_path);
 
 unsigned alarm(unsigned);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

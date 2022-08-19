@@ -2,6 +2,10 @@
 #ifndef _WASIX_SIGNAL_H
 #define _WASIX_SIGNAL_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <unistd.h>
 #include_next <signal.h>
 
@@ -200,4 +204,9 @@ int sigemptyset(sigset_t *);
 int sigfillset(sigset_t *);
 int sigaddset(sigset_t *, int);
 int sigprocmask(int, const sigset_t *__restrict, sigset_t *__restrict);
+
+#ifdef __cplusplus
+}
+#endif
+
 #endif

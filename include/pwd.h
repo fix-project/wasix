@@ -1,6 +1,10 @@
 #ifndef _WASIX_PWD_H
 #define _WASIX_PWD_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <unistd.h>
 #include <features.h>
 #include <bits/alltypes.h>
@@ -24,5 +28,9 @@ struct passwd
 struct passwd *getpwnam(const char *name);
 
 struct passwd *getpwuid(uid_t uid);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

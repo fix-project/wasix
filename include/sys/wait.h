@@ -2,6 +2,10 @@
 #ifndef _WASIX_SYS_WAIT_H
 #define _WASIX_SYS_WAIT_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <bits/alltypes.h>
 
 #define WNOHANG    1
@@ -18,5 +22,9 @@ typedef int pid_t;
 
 pid_t wait(int *wstatus);
 pid_t waitpid(pid_t pid, int *status, int options);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
