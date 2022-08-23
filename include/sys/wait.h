@@ -23,6 +23,9 @@ typedef int pid_t;
 pid_t wait(int *wstatus);
 pid_t waitpid(pid_t pid, int *status, int options);
 
+#include <sys/resource.h>
+pid_t wait4 (pid_t, int *, int, struct rusage *);
+
 #ifdef __cplusplus
 }
 #endif
