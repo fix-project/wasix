@@ -12,11 +12,6 @@ int dup(int x) {
     return -1;
 }
 
-int dup2(int x, int y) {
-    (void)unimplemented(ENOTSUP);
-    return -1;
-}
-
 pid_t getpid(void) {
     (void)unimplemented(0);
     char *val = getenv("WASIX_PID");

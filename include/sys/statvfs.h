@@ -22,7 +22,7 @@ struct statvfs {
 	unsigned :8*(2*sizeof(int)-sizeof(long));
 	unsigned long f_fsid;
 #endif
-	unsigned long f_flags, f_namemax;
+	unsigned long f_flag, f_flags, f_namemax;
 	int __reserved[6];
 };
 
