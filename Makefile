@@ -13,6 +13,7 @@ WASI_BASE_CFLAGS= \
   -g \
   --target=wasm32-unknown-wasi \
   -D_WASI_EMULATED_SIGNAL \
+  -D_WASI_EMULATED_MMAN \
   -I$(WASI_SYSROOT)/include \
   -isystem ./include
 
