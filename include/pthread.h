@@ -109,6 +109,7 @@ int pthread_setschedparam(pthread_t, int, const struct sched_param *);
 int pthread_setschedprio(pthread_t, int);
 
 int pthread_once(pthread_once_t *, void (*)(void));
+int pthread_sigmask(int how, const sigset_t *set, sigset_t *oldset);
 
 int pthread_mutex_init(pthread_mutex_t *__restrict, const pthread_mutexattr_t *__restrict);
 int pthread_mutex_lock(pthread_mutex_t *);

@@ -150,3 +150,8 @@ int pthread_mutexattr_settype(pthread_mutexattr_t * a, int b) {
 int pthread_mutexattr_destroy(pthread_mutexattr_t * a) {
     return 0;
 }
+
+int pthread_sigmask(int how, const sigset_t *set, sigset_t *oldset)
+{
+    return 0;
+}
