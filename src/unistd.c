@@ -45,6 +45,11 @@ pid_t getsid(pid_t pid) {
     return -1;
 }
 
+pid_t setsid(void) {
+    (void)unimplemented(ENOTSUP);
+    return -1;
+}
+
 uid_t getuid(void) {
     (void)unimplemented(0);
     char *val = getenv("WASIX_UID");

@@ -22,6 +22,7 @@ pid_t getpid(void);
 pid_t getppid(void);
 
 pid_t getsid(pid_t);
+pid_t setsid(void);
 
 int system(const char *command);
 int execv(const char *pathname, char *const argv[]);
